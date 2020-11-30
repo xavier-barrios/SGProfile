@@ -25,17 +25,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Modal Header</h2>
+                <h2>Crear post</h2>
             </div>
-            <div class="modal-body ">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
-            </div>
-            <div class="modal-footer ">
-                <h3>Modal Footer</h3>
+            <div class="modal-body">
+                <form action="../controller/postController.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" id="title" name="title" placeholder="Título de la foto...">
+
+                    <input type="file" id="img" name="img">
+
+                    <input type="submit" value="Añadir">
+                </form>
             </div>
         </div>
+    </div>
 
+    </div>
+    <div class="row">
+        <div class="three-column">
+            <img src="../public/facebook.png" alt="">
+        </div>
     </div>
 </body>
 
