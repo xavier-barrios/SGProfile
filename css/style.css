@@ -1,16 +1,16 @@
-body {
-    margin: 0;
-}
-
 * {
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.row:after {
+.row::after {
     content: "";
     display: table;
     clear: both;
+}
+
+body {
+    margin: 0;
 }
 
 ul {
@@ -22,11 +22,17 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.143);
 }
 
 li {
     float: left;
     width: 33.33%;
+}
+
+.div2 li {
+    float: left;
+    width: 24.24%;
 }
 
 li a {
@@ -37,12 +43,23 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    color: gray;
+li a:hover {
+    background-color: gray;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
-/* reglas asociadas al modal */
+/* The Modal (background) */
 
 .modal {
     display: none;
@@ -76,7 +93,7 @@ li a:hover:not(.active) {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -110,7 +127,7 @@ li a:hover:not(.active) {
 }
 
 
-/* The Close Button */
+/* Reglas asociadas al modal */
 
 .close {
     color: white;
@@ -136,11 +153,71 @@ li a:hover:not(.active) {
     padding: 2px 16px;
 }
 
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
     color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
 }
 
 
-/* fin de reglas asociadas al modal */
+/* clase de columnas */
+
+.three-column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.three-column img {
+    width: 100%;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-lat {
+    padding: 0 10%;
+}
+
+.juan {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+}
+
+.img1 {
+    border: 6px solid red;
+}
+
+@media only screen and (max-width: 700px) {
+    .three-column {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-device-width: 700px) {
+    .three-column {
+        width: 100%;
+    }
+}
