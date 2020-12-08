@@ -35,14 +35,14 @@
                 <form action="home.php" method="POST" enctype="multipart/form-data">
                     <input type="text" id="title" name="title" placeholder="título de la foto..">
                     <input type="file" id="img" name="img">
-                    <input type="hidden" name="id" value="<?php echo $id; ?>"><br>
+                    <!-- <input type="hidden" name="id" value=""><br> -->
                     <input type="submit" name="submit" value="Añadir">
                 </form>
                 <?php
                 if (isset($_POST['submit'])) {
                     require_once '../model/postsDAO.php';
                     $posts1 = new PostsDao();
-                    $posts1->insertarPosts($id);
+                    $posts1->insertarPosts();
                 }
                 ?>
             </div>

@@ -22,9 +22,9 @@ class PostsDao{
         }
             $id=$posts['id'];
             if ($posts['user'] == $_SESSION['user']->getId()) {
-                echo "<img class='img1' src='../{$posts['path']}'>";
+                echo "<img class='img1' style='height: 200px;' src='../{$posts['path']}'>";
             } else {
-                echo "<img src='../{$posts['path']}'>";
+                echo "<img style='height: 200px;' src='../{$posts['path']}'>";
             }
             echo "</div>";
         }
@@ -113,9 +113,9 @@ class PostsDao{
             echo "</table>";
     }
 
-    public function insertarPosts($id){
+    public function insertarPosts(){
         require_once '../model/connection.php';
-        include '../controller/sessionController.php';
+        require_once '../controller/sessionController.php';
         $id = $_SESSION['user']->getId();
         $title = $_POST['title'];
         $path = 'public/'.$_FILES['img']['name'];
