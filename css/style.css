@@ -1,16 +1,16 @@
-body {
-    margin: 0;
-}
-
 * {
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.row:after {
+.row::after {
     content: "";
     display: table;
     clear: both;
+}
+
+body {
+    margin: 0;
 }
 
 ul {
@@ -30,6 +30,11 @@ li {
     width: 33.33%;
 }
 
+.div2 li {
+    float: left;
+    width: 24.24%;
+}
+
 li a {
     display: block;
     color: black;
@@ -38,12 +43,23 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    color: gray;
+li a:hover {
+    background-color: gray;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
-/* reglas asociadas al modal */
+/* The Modal (background) */
 
 .modal {
     display: none;
@@ -111,7 +127,7 @@ li a:hover:not(.active) {
 }
 
 
-/* The Close Button */
+/* Reglas asociadas al modal */
 
 .close {
     color: white;
@@ -137,20 +153,8 @@ li a:hover:not(.active) {
     padding: 2px 16px;
 }
 
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-
-/* fin de reglas asociadas al modal */
-
-
-/* reglas de formulario */
-
 input[type=text],
-[type=file] {
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -176,7 +180,7 @@ input[type=submit]:hover {
 }
 
 
-/* fin de reglas de formulario */
+/* clase de columnas */
 
 .three-column {
     float: left;
@@ -186,4 +190,34 @@ input[type=submit]:hover {
 
 .three-column img {
     width: 100%;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-lat {
+    padding: 0 10%;
+}
+
+.juan {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+}
+
+.img1 {
+    border: 6px solid red;
+}
+
+@media only screen and (max-width: 700px) {
+    .three-column {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-device-width: 700px) {
+    .three-column {
+        width: 100%;
+    }
 }
