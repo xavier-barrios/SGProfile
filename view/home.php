@@ -17,12 +17,9 @@
 <body>
     <!-- Menu de navegación -->
     <ul>
-        <div class="div2">
-        <li><a href="./homeAdmin.php"><?php echo $_SESSION['user']->getEmail() ?></a></li>
+        <li><a href="./home.php"><?php echo $_SESSION['user']->getEmail() ?></a></li>
         <li><a onclick="openModal()">+</a></li>
-        <li><a href="adminUsers.php">Administrar Usuarios</a></li>
         <li><a href="../view/login.php">logout</a></li>
-        </div>
     </ul>
 
     <!-- The Modal -->
