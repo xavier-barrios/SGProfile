@@ -74,15 +74,18 @@ class PostsDao{
         $id=-1;   
         $lista=$sentencia->fetchAll(PDO::FETCH_ASSOC);
         // creamos la tabla con los campos
-        echo "<table style='width: 100%';>";
+        echo "<div class='container'>";
+        echo "<table style='width: 100%' class='table';>";
+        echo "<thead class='thead-dark'>";
             echo "<tr>";
                 echo "<th>Nombre</th>";
                 echo "<th>Email</th>";
                 echo "<th>Perfil</th>";
                 echo "<th>Estado</th>";
             echo "</tr>";
+        echo "</thead>";
         foreach($lista as $usuario) {
-        echo "<tr style='text-align: center';>";
+        echo "<tr>";
             if ($id==$usuario['id']) {
                 $id=-1;
                 continue;

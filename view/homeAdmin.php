@@ -16,7 +16,7 @@ include '../controller/sessionController.php';
     <!--Menu de navegación-->
     <ul>
         <div class="div2">
-        <li><a><?php echo $_SESSION['user']->getEmail() ?></a></li>
+        <li><a href="./homeAdmin.php"><?php echo $_SESSION['user']->getEmail() ?></a></li>
         <li><a onclick="openModal()">+</a></li>
         <li><a href="adminUsers.php">Administrar Usuarios</a></li>
         <li><a href="../view/login.php">logout</a></li>
@@ -26,7 +26,7 @@ include '../controller/sessionController.php';
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
-        <!-- Modal content -->
+        <!-- contenido de la ventana modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>

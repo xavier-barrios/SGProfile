@@ -15,17 +15,20 @@
         include '../controller/sessionController.php';
     ?>
 <body>
-    <!--Menu de navegación-->
+    <!-- Menu de navegación -->
     <ul>
-        <li><a><?php echo $_SESSION['user']->getEmail() ?></a></li>
+        <div class="div2">
+        <li><a href="./homeAdmin.php"><?php echo $_SESSION['user']->getEmail() ?></a></li>
         <li><a onclick="openModal()">+</a></li>
+        <li><a href="adminUsers.php">Administrar Usuarios</a></li>
         <li><a href="../view/login.php">logout</a></li>
+        </div>
     </ul>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
-        <!-- Modal content -->
+        <!-- comteniodo de la ventana modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>
@@ -35,7 +38,6 @@
                 <form action="home.php" method="POST" enctype="multipart/form-data">
                     <input type="text" id="title" name="title" placeholder="título de la foto..">
                     <input type="file" id="img" name="img">
-                    <!-- <input type="hidden" name="id" value=""><br> -->
                     <input type="submit" name="submit" value="Añadir">
                 </form>
                 <?php

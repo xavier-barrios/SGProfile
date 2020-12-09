@@ -13,6 +13,7 @@
     <title>Registro</title>
 </head>
 <body>
+  <!-- formulario para registrarse -->
 <div class="login container" style="margin: 60px auto;">
   <h2 class="login-header">Registrarse</h2>
     <form  action="registro.php" method="POST" onsubmit="return validarFor()">

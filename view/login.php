@@ -12,9 +12,8 @@
 <body>
   <br><br>
 <div class="container">
-    
+    <!-- formulario para logearse -->
   <h2 class="login-header">Iniciar Sesion</h2>
-  <!--Creamos el formulario del login, que nos servirá para recoger variables para el userDAO y la funcion del login -->
     <form class="form-group" action="../controller/loginController.php" method="POST">
         <br>
         <p><input type="email" class="form-control" id="email" name="email" placeholder="Email"></p>
