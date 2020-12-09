@@ -104,7 +104,7 @@ class PostsDao{
             }
             else if ($usuario['status'] == 1) {
                 // si el estatus del usuario es 1 mostrar el candado en abierto y azul
-                echo "<td><a style='text-decoration: none'; 'color: blue';' href='../controller/actualizar.php?id=".$id."&status=".$status."'><i onclick='cambiarIcon()' id='block' class='fas fa-lock-open'></i></a></td>";
+                echo "<td><a style='text-decoration: none'; 'color: blue';' href='../controller/actualizar.php?id=".$id."&status=".$status."'><i onclick='cambiarIcon()' id='block' class='fas fa-unlock-alt'></i></a></td>";
             } else if ($usuario['status'] == 0) {
                 // si el estatus del usuario es 0 mostrar el candado en cerrado y rojo
                 echo "<td><a href='../controller/actualizar.php?id=".$id."&status=".$status."'><i onclick='cambiarIcon()' id='block' class='fas fa-lock'></i></a></td>";
